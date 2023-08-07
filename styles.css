@@ -1,0 +1,32 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+.content {
+  display: flex;
+}
+
+.half {
+  flex: 50%;
+}
+
+.grid-container {
+  display: flex;
+  height: 500px;
+  width: 500px;
+}
+
+#grid {
+  flex: 1;
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  padding: 0;
+  border: 1px solid #00000075;
+  text-align: center;
+}
