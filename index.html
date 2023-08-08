@@ -14,6 +14,10 @@
         <div class="half">
             <h2>Settings</h2>
             <button id="clearButton">Clear</button>
+            <div class="slidecontainer">
+                <input type="range" name="rangeInput" min="16" max="100" value="16" onchange="updateTextInput(this.value);">
+                <input type="text" id="sliderInput" value="">
+            </div>
         </div>
         <div class="half">
             <div class="grid-container">
