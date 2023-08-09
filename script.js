@@ -87,6 +87,7 @@ function painter(e) {
     }
 };
 
+//Load the functions required to start
 function startUp() {
     makeRows(DEFAULT_ROWS, DEFAULT_COLUMNS);
     modeButton.forEach(button => button.addEventListener('click', setupModeButtons));
