@@ -5,6 +5,7 @@
 
 body {
   background: #e0e0e0;
+  font-family: Roboto, sans-serif;
 }
 
 .content {
@@ -37,4 +38,137 @@ body {
   padding: 0;
   border: 1px solid #00000075;
   text-align: center;
+}
+
+button {
+  position: relative;
+  height: 50px;
+  width: 150px;
+  border: none;
+  color: #000;
+}
+
+button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: #000;
+}
+
+button:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+button:active {
+  top: 2px;
+}
+
+.slidecontainer {
+  position: relative;
+  margin-top: 20px;
+  width: 200px; /* Adjust the width as needed */
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  outline: none;
+  background: transparent;
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transform: translateY(-25%);
+  z-index: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #fff9, #0001);
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    7px 7px 20px 0px #0002;
+}
+
+/* Add some styling for the track of the slider */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  background: #ccc; /* Adjust the track color as needed */
+  border-radius: 5px;
+  position: relative;
+  z-index: 0; /* Ensure the track is behind the thumb */
+}
+
+/* Adjust the width, height, and other properties as needed */
+input[type="text"] {
+  height: 50px;
+  width: 150px;
+  padding: 10px; /* Add some padding for better spacing */
+  border: none;
+  color: #000;
+  position: relative;
+  background: transparent;
+  font-family: 'Roboto', sans-serif; /* Apply the same font as the rest of the page */
+}
+
+input[type="text"]:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:hover {
+  color: #000;
+}
+
+input[type="text"]:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+input[type="text"]:active {
+  top: 2px;
 }
