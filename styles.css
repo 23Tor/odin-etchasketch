@@ -3,6 +3,10 @@
   --grid-rows: 1;
 }
 
+body {
+  background: #e0e0e0;
+}
+
 .content {
   display: flex;
 }
@@ -15,6 +19,10 @@
   display: flex;
   height: 500px;
   width: 500px;
+  border-radius: 0px;
+  background: #e0e0e0;
+  box-shadow:  27px 27px 54px #bebebe,
+              -27px -27px 54px #ffffff;
 }
 
 #grid {
