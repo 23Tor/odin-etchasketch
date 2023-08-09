@@ -4,7 +4,8 @@ const DEFAULT_COLUMNS = 16;
 
 // Declare selectors
 const modeButton = document.querySelectorAll('.mode');
-const blackModeButton = document.querySelector(".black");
+const blackButton = document.querySelector(".black");
+const eraserButton = document.querySelector(".eraser")
 const clearButton = document.querySelector('.clear');
 const container = document.getElementById("grid");
 const rangeInput = document.getElementById("rangeInput");
@@ -19,11 +20,13 @@ modeButton.forEach(button => {
         } else if (button.classList.contains('clear')) {
             currentMode = 'black';
             clearGrid();
+        } else if (button.classList.contains('eraser')) {
+            currentMode = 'eraser'
         }
     });
 });
 
-blackModeButton.addEventListener('click', () => {
+blackButton.addEventListener('click', () => {
     currentMode = 'black';
 });
 
@@ -71,7 +74,7 @@ function makeRows(rows, cols) {
     });
 };
 
-// Mouseover color mode
+// Mouseover color modes
 function painter(e) {
     if (currentMode === 'black') {
         e.target.style.backgroundColor = 'black';
@@ -79,6 +82,8 @@ function painter(e) {
         const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         e.target.style.backgroundColor = randomColor;
+    } else if (currentMode === 'eraser') {
+        e.target.style.background = 'white'
     }
 };
 
