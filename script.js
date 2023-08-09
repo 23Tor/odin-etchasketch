@@ -83,7 +83,7 @@ function painter(e) {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         e.target.style.backgroundColor = randomColor;
     } else if (currentMode === 'eraser') {
-        e.target.style.background = 'white'
+        e.target.style.background = '#e0e0e0'
     }
 };
 
