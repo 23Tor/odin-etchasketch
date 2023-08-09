@@ -13,9 +13,17 @@
     <div class="content">
         <div class="half">
             <h2>Settings</h2>
-            <button id="clearButton">Clear</button>
+            <div class="mode-controls">
+                <button class="mode black">Black</button>
+                <br>
+                <button class="mode color">Color Mode</button>
+                <br>
+                <button class="mode eraser">Eraser</button>
+                <br>
+                <button class="mode clear">Clear</button>
+            </div>
             <div class="slidecontainer">
-                <input type="range" name="rangeInput" min="16" max="100" value="16" onchange="updateTextInput(this.value);">
+                <input type="range" id="rangeInput" min="16" max="100" value="16">
                 <input type="text" id="sliderInput" value="">
             </div>
         </div>
