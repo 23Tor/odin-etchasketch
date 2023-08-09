@@ -41,13 +41,15 @@ rangeInput.addEventListener('input', () => {
     makeRows(value, value);
 });
 
-sliderInput.addEventListener('change', () => {
-    const value = parseInt(sliderInput.value); // Convert the value to an integer
+sliderInput.addEventListener('input', () => {
+    const value = parseInt(sliderInput.value);
+
     if (!isNaN(value) && value >= parseInt(rangeInput.min) && value <= parseInt(rangeInput.max)) {
         rangeInput.value = value;
         makeRows(value, value);
     }
 });
+
 
 // Functions
 // Clear buttons
