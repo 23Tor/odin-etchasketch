@@ -10,11 +10,18 @@ body {
 
 .content {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80vh;
+  margin-top: 20vh;
+  margin-left: 20vh;
 }
 
+
 .half {
-  flex: 50%;
+  flex: 1;
 }
+
 
 .grid-container {
   display: flex;
@@ -22,8 +29,8 @@ body {
   width: 500px;
   border-radius: 0px;
   background: #e0e0e0;
-  box-shadow:  27px 27px 54px #bebebe,
-              -27px -27px 54px #ffffff;
+  box-shadow:  14px 14px 32px #b5b5b5,
+             -14px -14px 32px #ffffff;
 }
 
 #grid {
@@ -80,9 +87,10 @@ button:active {
 }
 
 .slidecontainer {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-top: 20px;
-  width: 200px; /* Adjust the width as needed */
+  width: 50%;
 }
 
 input[type="range"] {
@@ -120,37 +128,31 @@ input[type="range"]::-webkit-slider-thumb:after {
     7px 7px 20px 0px #0002;
 }
 
-/* Add some styling for the track of the slider */
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
-  background: #ccc; /* Adjust the track color as needed */
+  background: #ccc;
   border-radius: 5px;
   position: relative;
-  z-index: 0; /* Ensure the track is behind the thumb */
+  z-index: 0;
 }
 
-/* Adjust the width, height, and other properties as needed */
-input[type="text"] {
+
+.number-input {
   height: 50px;
-  width: 150px;
-  padding: 10px; /* Add some padding for better spacing */
+  width: 100px;
+  margin-left: 10px;
+}
+
+input[type="number"] {
+  height: 15px;
+  width: 30px;
+  padding: 10px;
   border: none;
   color: #000;
-  position: relative;
   background: transparent;
-  font-family: 'Roboto', sans-serif; /* Apply the same font as the rest of the page */
-}
-
-input[type="text"]:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 8px;
   box-shadow:
     -7px -7px 20px 0px #fff9,
     -4px -4px 5px 0px #fff9,
@@ -159,16 +161,26 @@ input[type="text"]:after {
   transition: all 0.3s ease;
 }
 
-input[type="text"]:hover {
+input[type="number"]:hover {
   color: #000;
+  box-shadow:
+    -4px -4px 8px 0px #fff9,
+    -2px -2px 3px 0px #fff9,
+    4px 4px 8px 0px #0002,
+    2px 2px 3px 0px #0001;
 }
 
-input[type="text"]:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-
-input[type="text"]:active {
+input[type="number"]:active {
   top: 2px;
+  box-shadow:
+    -2px -2px 5px 0px #fff9,
+    -1px -1px 2px 0px #fff9,
+    2px 2px 5px 0px #0002,
+    1px 1px 2px 0px #0001;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
